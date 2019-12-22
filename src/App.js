@@ -5,7 +5,6 @@ import CitySearch from "./components/CitySearch";
 import WeatherInformation from "./components/WeatherInformation";
 
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);

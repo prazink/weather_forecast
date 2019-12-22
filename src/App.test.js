@@ -84,5 +84,46 @@ describe('App', () => {
 
     expect(component.instance().state.error).toBe('Couldn\'t find weather information for New York!');
     });
+
+    it('can retrieve city information with different case search input', () => {
+      // Arrange
+      const component = mount(<App />);
+
+      // Act & Assert
+      const cityInput = component.find("#cityInput");
+      const getWeatherInfoButton = component.find("#getWeather");
+
+      // all uppercase string input in city search box
+      cityInput.simulate('change', { target: { value: 'ADELAIDE' } });
+      getWeatherInfoButton.simulate('click');
+
+      expect(component.instance().state.weatherInformation).toEqual({
+        city: "Adelaide",
+        weather: [
+          {
+            id: 761,
+            main: "Dust",
+            description: "dust",
+            icon: "http://openweathermap.org/img/wn/50d@2x.png"
+          }
+        ]
+      });
+
+      // mixed case string input in city search box
+      cityInput.simulate('change', { target: { value: 'HoBArT' } });
+      getWeatherInfoButton.simulate('click');
+
+      expect(component.instance().state.weatherInformation).toEqual({
+        city: "Hobart",
+        weather: [
+          {
+            id: 802,
+            main: "Clouds",
+            description: "scattered clouds",
+            icon: "http://openweathermap.org/img/wn/03d@2x.png"
+          }
+        ]
+      });
+    });
   });
 });

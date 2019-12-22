@@ -74,7 +74,7 @@ class App extends React.Component {
                 title="Weather Forecast"
                 subTitle="Find out your current city, temperature and conditions" />
               <CitySearch
-                onCityUpdateMethod={onCityUpdate}
+                onCityUpdate={onCityUpdate}
                 city={city}
                 getWeatherInfo={getWeatherInfo} />
             </div>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 const CitySearch = props => {
-    const { city, getWeatherInfo, onCityUpdateMethod } = props;
+    const { city, getWeatherInfo, onCityUpdate } = props;
 
     return (
       <div className="citySearch">
@@ -13,7 +13,7 @@ const CitySearch = props => {
           name="city"
           placeholder="Enter your City..."
           value={city}
-          onChange={(event) => onCityUpdateMethod(event)}
+          onChange={(event) => onCityUpdate(event)}
           onKeyPress={e => { 
             if(e.key === 'Enter'){
               getWeatherInfo();
@@ -34,7 +34,7 @@ const CitySearch = props => {
   CitySearch.propTypes = {
     city: PropTypes.string,
     getWeatherInfo: PropTypes.func.isRequired,
-    onCityUpdateMethod: PropTypes.func.isRequired
+    onCityUpdate: PropTypes.func.isRequired
   };
   
   CitySearch.defaultProps = {

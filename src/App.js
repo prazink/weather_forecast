@@ -1,16 +1,18 @@
 import React from 'react';
 import Header from './components/Header';
+import CitySearch from "./components/CitySearch";
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
 
-  }
   render () {
     return (
       <>
-      <Header />
+      
+      <Header
+        title="Weather Forecast"
+        subTitle="Find out your current city, temperature and conditions" />
+      <CitySearch />
       </>
     );
   }

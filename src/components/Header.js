@@ -15,11 +15,11 @@ const subTitle = {
 
 }
 
-function Header () {
+function Header (props) {
     return (
       <>
-        <h1 style={titleHeader}>Header</h1>
-        <p style={subTitle}>Me</p>
+        <h1 style={titleHeader}>{props.title}</h1>
+        <p style={subTitle}>{props.subTitle}</p>
       </>
       );
 }

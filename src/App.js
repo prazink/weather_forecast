@@ -39,16 +39,21 @@ class App extends React.Component {
     const { city } = state;
 
     return (
-      <>
-      
-      <Header
-        title="Weather Forecast"
-        subTitle="Find out your current city, temperature and conditions" />
-      <CitySearch
-        onCityUpdateMethod={onCityUpdate}
-        city={city} />
+      <div className= "wrapper">
+        <div className= "mainWrapper">
+          <div className= "innerWrapper">
+            <div className= "WeatherDesc">
+              <Header
+                title="Weather Forecast"
+                subTitle="Find out your current city, temperature and conditions" />
+              <CitySearch
+                onCityUpdateMethod={onCityUpdate}
+                city={city} />
+            </div>
+          </div>
+        </div>
+      </div>
 
-      </>
     );
   }
 }

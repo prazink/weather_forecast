@@ -9,6 +9,33 @@ body {
 h1 {
     margin: 0;
 }
+
+// Wrappers
+.wrapper {
+    background: #86B9E0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainWrapper {
+    height: 90vh;
+    background: transparent;
+    width: 80%;
+    margin: 0 auto;
+    @media (max-width:767px){
+        height: 50vh;
+    }
+}
+.innerWrapper {
+    max-width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Input
 input[type="text"] {
     height: 50px;
     border: 2px solid $White_color;
@@ -22,6 +49,7 @@ input[type="text"] {
     }
 }
 
+//Button
 button {
     height: 50px;
     margin: 0 30px;
@@ -40,28 +68,36 @@ button {
         color: rgb(134, 185, 224)!important;
     }
 }
-#weatherInfoError {
-    color: $White_color;
-    padding: 1em;
+
+// Header file Sytle
+.titleHeader {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+.subTitle {
     font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
 }
 
-#weatherInfoDescription {
-    padding-bottom: 30px;
+// CitySearch Style
+.citySearch {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding: 0 14%;
+    @media (max-width:767px){
+        padding: 0!important;
+    }
 }
+
 .WeatherDesc {
     font-family: "Alegreya Sans", sans-serif;
     max-width: 800px;
     display: block;
     margin: 0 auto;
-}
-.mCitySearch {
-    @media (max-width:767px){
-    padding: 0!important;
-    }
-}
-.mainWrapper{
-    @media (max-width:767px){
-    height: 50vh;
-    }
 }

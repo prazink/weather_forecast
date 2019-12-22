@@ -5,7 +5,7 @@ const CitySearch = props => {
     const { city, onCityUpdateMethod } = props;
 
     return (
-      <div  className="mCitySearch">
+      <div  className="CitySearch">
         <input
           id="cityInput"
           type="text"

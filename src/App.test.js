@@ -15,7 +15,7 @@ describe('App', () => {
       const component = mount(
           <App />
       );
-    console.warn(component.debug());
+
     // Assert
     expect(component.find('Header').length).toBe(1);
     expect(component.find('CitySearch').length).toBe(1);

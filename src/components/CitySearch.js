@@ -1,7 +1,9 @@
 import React from "react";
 
 
-const CitySearch = () => {
+const CitySearch = props => {
+    const { city, onCityUpdateMethod } = props;
+
     return (
       <div  className="mCitySearch">
         <input
@@ -9,11 +11,12 @@ const CitySearch = () => {
           type="text"
           name="city"
           placeholder="Enter your City..."
-          value=''
+          value={city}
+          onChange={(event) => onCityUpdateMethod(event)}
+         
         />
         <button 
           id="getWeather"
-          
           >
             Get Weather
           </button>

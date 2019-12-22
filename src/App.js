@@ -1,5 +1,4 @@
 import React from 'react';
-import './sass/App.scss';
 import data from './data';
 import Header from './components/Header';
 import CitySearch from "./components/CitySearch";

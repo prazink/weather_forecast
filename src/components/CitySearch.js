@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 
 const CitySearch = props => {
@@ -29,5 +30,15 @@ const CitySearch = props => {
       </div>
     )
   };
-
+  
+  CitySearch.propTypes = {
+    city: PropTypes.string,
+    getWeatherInfo: PropTypes.func.isRequired,
+    onCityUpdateMethod: PropTypes.func.isRequired
+  };
+  
+  CitySearch.defaultProps = {
+    city: ''
+  };
+  
   export default CitySearch;

@@ -6,7 +6,7 @@ const CitySearch = props => {
     const { city, getWeatherInfo, onCityUpdateMethod } = props;
 
     return (
-      <div  className="CitySearch">
+      <div className="citySearch">
         <input
           id="cityInput"
           type="text"
@@ -30,7 +30,7 @@ const CitySearch = props => {
       </div>
     )
   };
-  
+
   CitySearch.propTypes = {
     city: PropTypes.string,
     getWeatherInfo: PropTypes.func.isRequired,

@@ -67,7 +67,7 @@ class App extends React.Component {
       <div className= "wrapper">
         <div className= "mainWrapper">
           <div className= "innerWrapper">
-            <div className= "WeatherDesc">
+            <div className= "weatherDesc">
               <Header
                 title="Weather Forecast"
                 subTitle="Find out your current city, temperature and conditions" />

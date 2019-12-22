@@ -19,7 +19,7 @@ const WeatherInformation = (props) => {
     return ( city && description &&
         <div className= "container">
             <div className= "city">
-                <div className= "temperature">
+                <div className= "cityName">
                     <h1 id="weatherInfoCity">{city}</h1>
                 </div>
                 {icon && <img src={icon} alt={city} />}

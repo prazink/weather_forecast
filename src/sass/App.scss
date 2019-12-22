@@ -33,7 +33,7 @@ h1 {
         margin-right: auto;
         margin-left: auto;
     }
-    .WeatherDesc {
+    .weatherDesc {
         font-family:  $Secondary_fontFamily;
         max-width: 800px;
         display: block;
@@ -90,7 +90,7 @@ button {
 }
 
 // CitySearch Style
-.CitySearch {
+.citySearch {
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -117,7 +117,7 @@ button {
     .city {
         font-family: $Secondary_fontFamily;
         .temperature {
-            font-size: 2em;
+            font-size: 3em;
             line-height: 1.3;
         }
         .description {

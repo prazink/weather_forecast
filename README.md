@@ -34,9 +34,9 @@ Now the output will show the city's weather data from `data.js` file
 
 ## Validation
 
-City search field has couple of validations.
+City search field has four validations.
 
-1. Required field validation
+1. Required field validation with no input data
 
 ![No input city name](https://github.com/prazink/weather_forecast/blob/master/src/img/noinputdata.png)
 

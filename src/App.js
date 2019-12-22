@@ -33,7 +33,11 @@ class App extends React.Component {
 
   getWeatherInfo = () => {
     const { city } = this.state;
-  
+    if(!city){
+      this.setState({error: 'Please enter a valid city name'});
+      return;
+    }
+    
     const weatherInfo = data.find(d => d.name === city);
     if(weatherInfo){
       const { name, weather, main } = weatherInfo;

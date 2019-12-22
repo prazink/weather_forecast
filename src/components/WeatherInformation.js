@@ -1,11 +1,20 @@
 import React from "react";
 
 const WeatherInformation = (props) => {
-    const { weatherInformation, temperatureInformation } = props;
+    const { weatherInformation, temperatureInformation, error } = props;
     const { temp, temp_min, temp_max} = temperatureInformation;
+    // Error message when input value is not valid or empty
+    if(error){
+        return (<div className= "container">
+            <div  id="weatherInfoError">
+                {error}
+            </div>
+        </div>);
+    }
+
     const {city, weather } =  weatherInformation;
     const { icon, description } = weather[0];
-    
+
     return ( city && description &&
         <div className= "container">
             <div className= "city">

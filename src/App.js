@@ -35,15 +35,21 @@ class App extends React.Component {
     const { city } = this.state;
   
     const weatherInfo = data.find(d => d.name === city);
-    const { name, weather, main } = weatherInfo;
-    this.setState({
-      weatherInformation: {
-        city: name, 
-        weather,
-      },
-      main,
-      error: ''
-    });
+    if(weatherInfo){
+      const { name, weather, main } = weatherInfo;
+      this.setState({
+        weatherInformation: {
+          city: name, 
+          weather,
+        },
+        main,
+        error: ''
+      });
+      } else{
+        this.setState({
+          error: `Couldn't find weather information for ${city}!`
+        });
+      }
     
   };
 

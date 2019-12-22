@@ -2,7 +2,7 @@ import React from "react";
 
 
 const CitySearch = props => {
-    const { city, onCityUpdateMethod } = props;
+    const { city, getWeatherInfo, onCityUpdateMethod } = props;
 
     return (
       <div  className="CitySearch">
@@ -13,10 +13,16 @@ const CitySearch = props => {
           placeholder="Enter your City..."
           value={city}
           onChange={(event) => onCityUpdateMethod(event)}
-         
+          onKeyPress={e => { 
+            if(e.key === 'Enter'){
+              getWeatherInfo();
+            }
+          }
+        }
         />
         <button 
           id="getWeather"
+          onClick={getWeatherInfo}
           >
             Get Weather
           </button>

@@ -1,9 +1,10 @@
 import React from 'react';
 import './sass/App.scss';
 import data from './data';
-
 import Header from './components/Header';
 import CitySearch from "./components/CitySearch";
+import WeatherInformation from "./components/WeatherInformation";
+
 
 
 class App extends React.Component {
@@ -52,7 +53,7 @@ class App extends React.Component {
 
   render () {
     const { onCityUpdate, state, getWeatherInfo } = this;
-    const { city } = state;
+    const { city, main, weatherInformation, error } = state;
 
     return (
       <div className= "wrapper">
@@ -64,10 +65,17 @@ class App extends React.Component {
                 subTitle="Find out your current city, temperature and conditions" />
               <CitySearch
                 onCityUpdateMethod={onCityUpdate}
-                city={city} 
+                city={city}
                 getWeatherInfo={getWeatherInfo} />
             </div>
-            
+            <div className="weather_info">
+              <WeatherInformation
+                city={city}
+                temperatureInformation={main}
+                weatherInformation={weatherInformation}
+                error={error}
+              />
+            </div>
           </div>
         </div>
       </div>

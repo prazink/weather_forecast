@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Weather App
 
-## Available Scripts
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-In the project directory, you can run:
+## Instructions to run the application
 
-### `npm start`
+* Clone the solution
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```git
+    git clone https://github.com/prazink/WeatherApp.git
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* Open in Visual Studio Code or preferred code editor
 
-### `npm test`
+* Execute the following code in terminal
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```node
+    npm install
 
-### `npm run build`
+    npm run build
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    npm run start
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Navigate to http://localhost:3000/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Application running](https://github.com/prazink/WeatherApp/blob/master/src/img/startpage.png)
 
-### `npm run eject`
+Input the Australian city's name and hit enter or Press on `Get weather` button
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Now the output will show the city's weather data from `data.js` file
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Show city weather successfully](https://github.com/prazink/WeatherApp/blob/master/src/img/validcityweatherforecast.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Validation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+City search field has couple of validations.
 
-## Learn More
+1. Required field validation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![No input city name](https://github.com/prazink/WeatherApp/blob/master/src/img/noinputdata.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. City weather information not found
 
-### Code Splitting
+![City weather info not found](https://github.com/prazink/WeatherApp/blob/master/src/img/invalidinput.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Test
 
-### Analyzing the Bundle Size
+To run the test execute:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```node
+    npm run test
+```
 
-### Making a Progressive Web App
+![Run test results](https://github.com/prazink/WeatherApp/blob/master/src/img/test.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Packages used
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. React
+2. Sass
+3. PropTypes
+3. Jest
+4. Enzyme

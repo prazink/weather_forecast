@@ -125,5 +125,30 @@ describe('App', () => {
         ]
       });
     });
+
+    it('can retrieve city information when city search input contains whitespace', () => {
+      // Arrange
+      const component = mount(<App />);
+
+      // Act & Assert
+      const cityInput = component.find("#cityInput");
+      const getWeatherInfoButton = component.find("#getWeather");
+
+      // city input search box contains whitespace
+      cityInput.simulate('change', { target: { value: ' Adelaide ' } });
+      getWeatherInfoButton.simulate('click');
+
+      expect(component.instance().state.weatherInformation).toEqual({
+        city: "Adelaide",
+        weather: [
+          {
+            id: 761,
+            main: "Dust",
+            description: "dust",
+            icon: "http://openweathermap.org/img/wn/50d@2x.png"
+          }
+        ]
+      });
+    });
   });
 });

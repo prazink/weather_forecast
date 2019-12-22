@@ -37,7 +37,7 @@ class App extends React.Component {
     }
     
     const weatherInfo = data.find(d => 
-      d.name.toLowerCase() === city.toLowerCase());
+      d.name.toLowerCase() === city.toLowerCase().trim());
 
     if(weatherInfo){
       const { name, weather, main } = weatherInfo;

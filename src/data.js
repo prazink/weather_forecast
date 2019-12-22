@@ -9,7 +9,7 @@ const data = [
              "id":800,
              "main":"Clear",
              "description":"clear sky",
-             "icon":"http://openweathermap.org/img/wn/01d@2x.png"
+             "icon":"http://openweathermap.org/img/wn/01d@2x.png" // added a valid icon instead of 01d
           }
        ],
        "base":"stations",

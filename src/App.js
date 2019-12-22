@@ -30,12 +30,28 @@ class App extends React.Component {
     };
   }
 
+  getWeatherInfo = () => {
+    const { city } = this.state;
+  
+    const weatherInfo = data.find(d => d.name === city);
+    const { name, weather, main } = weatherInfo;
+    this.setState({
+      weatherInformation: {
+        city: name, 
+        weather,
+      },
+      main,
+      error: ''
+    });
+    
+  };
+
   onCityUpdate = (event) => {
     this.setState({ city: event.target.value })
   }
 
   render () {
-    const { onCityUpdate, state } = this;
+    const { onCityUpdate, state, getWeatherInfo } = this;
     const { city } = state;
 
     return (
@@ -48,8 +64,10 @@ class App extends React.Component {
                 subTitle="Find out your current city, temperature and conditions" />
               <CitySearch
                 onCityUpdateMethod={onCityUpdate}
-                city={city} />
+                city={city} 
+                getWeatherInfo={getWeatherInfo} />
             </div>
+            
           </div>
         </div>
       </div>
